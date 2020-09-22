@@ -1538,14 +1538,20 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_doing
+drawable ic_done
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_login
+drawable ic_logout
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_newtask
+drawable ic_todo
 drawable ic_username
+drawable logo
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
 drawable material_ic_edit_black_24dp
@@ -1575,9 +1581,12 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable round_corner
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font my_custom_font
+font pacifico
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1666,6 +1675,7 @@ id blocking
 id bottom
 id bounce
 id btnLogin
+id btnLogout
 id buttonPanel
 id cancel_button
 id center
@@ -1711,6 +1721,8 @@ id direct
 id disableHome
 id disablePostScroll
 id disableScroll
+id doing
+id done
 id dragDown
 id dragEnd
 id dragLeft
@@ -1729,11 +1741,13 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab_task
 id fade
 id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filledTextField
 id fitToContents
 id fixed
 id flip
@@ -1836,6 +1850,7 @@ id radio
 id ratio
 id rectangles
 id relLogin
+id relTabs
 id reverseSawtooth
 id right
 id right_icon
@@ -1896,6 +1911,7 @@ id stretch
 id submenuarrow
 id submit_area
 id tabMode
+id tabStatus
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -1926,6 +1942,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id todo
 id toggle
 id top
 id topPanel
@@ -2083,6 +2100,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap launcherlogo
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description

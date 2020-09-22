@@ -1,18 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".tasksview">
 
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogout"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="#CDCACA"
+        app:strokeWidth="1.5dp"
+        app:rippleColor="@color/colorRed"
+        app:icon="@drawable/ic_logout"
+        app:iconTint="@color/colorRed"
+        app:iconSize="30dp"
+        app:iconGravity="textStart"
+        app:cornerRadius="10dp"
+        android:layout_marginTop="8dp"
+        app:elevation="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:onClick="logout"/>
+        
+
+
+
     <TextView
         android:id="@+id/txtUsername"
-        android:layout_width="200dp"
+        android:layout_width= "match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="168dp"
-        android:text="TextView"
+        android:layout_centerHorizontal="true"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/my_custom_font"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUsername"
+        android:layout_marginTop="10dp"
+        android:id="@+id/relTabs">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabStatus"
+        app:tabIndicatorColor="@color/colorRed"
+        app:tabIconTint="@color/colorRed"
+        app:tabTextColor="#0D0D0E">
+
+        <!-- To Do tab -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/todo"
+            android:text="To Do"
+            android:icon="@drawable/ic_todo"
+            >
+
+        </com.google.android.material.tabs.TabItem>
+
+
+        <!-- Doing tab -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/doing"
+            android:text="Doing"
+            android:icon="@drawable/ic_doing">
+
+        </com.google.android.material.tabs.TabItem>
+
+
+        <!-- Done tab -->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/done"
+            android:text="Done"
+            android:icon="@drawable/ic_done">
+
+        </com.google.android.material.tabs.TabItem>
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+        </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/fab_task"
+        app:rippleColor="#E1FFFF"
+        android:elevation="10dp"
+        android:src="@drawable/ic_newtask"
+        app:backgroundTint="#000000"
+        app:borderWidth="1.8dp"
+        android:backgroundTint="@color/colorRed"
+        app:fabCustomSize="70dp"
+        app:elevation="10dp"
+        />
+
+
+
+</RelativeLayout>
