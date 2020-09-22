@@ -108,6 +108,10 @@
         "source": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\src\\main\\res\\drawable-mdpi\\ic_login.png"
     },
     {
+        "merged": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_taskview.xml.flat",
+        "source": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\src\\main\\res\\layout\\activity_taskview.xml"
+    },
+    {
         "merged": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
