@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.babbangona.taskmanager.AddTask" />
         <activity android:name="com.babbangona.taskmanager.tasksview" />
         <activity android:name="com.babbangona.taskmanager.MainActivity" >
             <intent-filter>

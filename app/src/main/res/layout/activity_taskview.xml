@@ -24,7 +24,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginEnd="10dp"
         android:onClick="logout"/>
-        
+
 
 
 
@@ -49,52 +49,52 @@
         android:layout_marginTop="10dp"
         android:id="@+id/relTabs">
 
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tabStatus"
-        app:tabIndicatorColor="@color/colorRed"
-        app:tabIconTint="@color/colorRed"
-        app:tabTextColor="#0D0D0E">
-
-        <!-- To Do tab -->
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/todo"
-            android:text="To Do"
-            android:icon="@drawable/ic_todo"
-            >
+            android:id="@+id/tabStatus"
+            app:tabIndicatorColor="@color/colorRed"
+            app:tabIconTint="@color/colorRed"
+            app:tabTextColor="#0D0D0E">
 
-        </com.google.android.material.tabs.TabItem>
+            <!-- To Do tab -->
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/todo"
+                android:text="To Do"
+                android:icon="@drawable/ic_todo"
+                >
 
-
-        <!-- Doing tab -->
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/doing"
-            android:text="Doing"
-            android:icon="@drawable/ic_doing">
-
-        </com.google.android.material.tabs.TabItem>
+            </com.google.android.material.tabs.TabItem>
 
 
-        <!-- Done tab -->
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/done"
-            android:text="Done"
-            android:icon="@drawable/ic_done">
+            <!-- Doing tab -->
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/doing"
+                android:text="Doing"
+                android:icon="@drawable/ic_doing">
 
-        </com.google.android.material.tabs.TabItem>
-
-
-    </com.google.android.material.tabs.TabLayout>
+            </com.google.android.material.tabs.TabItem>
 
 
-        </RelativeLayout>
+            <!-- Done tab -->
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/done"
+                android:text="Done"
+                android:icon="@drawable/ic_done">
+
+            </com.google.android.material.tabs.TabItem>
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+    </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
@@ -112,6 +112,7 @@
         android:backgroundTint="@color/colorRed"
         app:fabCustomSize="70dp"
         app:elevation="10dp"
+        android:onClick="createTask"
         />
 
 
