@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText username;
     private ImageButton login;
 
+
     //declare shared preferences variables
     public static final String MYPREFERENCES = "loginPref";
     public static final String loginUsername = "nameKey";
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
         sharedpreference = getSharedPreferences(MYPREFERENCES, Context.MODE_PRIVATE);
         //get user name if exists
         username.setText(sharedpreference.getString(loginUsername, " "));
+        //clear preferences if intent
+        if(clearPreference()){
+            username.setText("");
+        }
+
     }
 
     //method for creating preferences
@@ -42,6 +48,19 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedpreference.edit();
         editor.putString(loginUsername,username);
         editor.apply();
+    }
+
+    //method for clearing preferences
+    public boolean clearPreference(){
+        Intent intent = getIntent();
+        if(getIntent().getStringExtra("true") != null){
+            SharedPreferences.Editor editor = sharedpreference.edit();
+            editor.clear();
+            editor.apply();
+            return true;
+        }
+            return false;
+
     }
 
     //method for next activity

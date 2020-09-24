@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTask">
+
+    <TextView
+        android:id="@+id/txtAdd"
+        android:layout_width= "wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/sourcesansproblack"
+        android:textColor="#070707"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAdd"
+        android:layout_marginTop="80dp"
+        android:layout_margin="20dp"
+        android:id="@+id/inputRel">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtselect"
+            android:text="Select Status"
+            android:layout_marginTop="60dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/sourcesansproregular"
+            android:textColor="#3F51B5"/>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"-->
+<!--            android:id="@+id/menu"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            app:boxBackgroundColor="@color/colorRed"-->
+<!--            app:boxCornerRadiusBottomEnd="10dp"-->
+<!--            app:boxCornerRadiusTopEnd="10dp"-->
+<!--            app:boxCornerRadiusTopStart="10dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:textColorHint="#F3EDED"-->
+<!--            app:boxCornerRadiusBottomStart="10dp"-->
+<!--            android:hint="status">-->
+
+<!--            <AutoCompleteTextView-->
+<!--                android:id="@+id/filled_exposed_dropdown"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:inputType="none"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <Spinner
+            android:id="@+id/statusSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorRed"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/txtselect"
+
+            />
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="80dp"
+            android:layout_below="@+id/statusSpinner"
+            app:boxStrokeColor="#FF0000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:padding="8dp"
+                android:layout_height="100dp"
+                android:hint="Type task here...."
+                android:backgroundTint="#F3F0F0"
+                android:fontFamily="@font/sourcesansproblacklt"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputRel"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorRed"
+        android:text="Submit"
+        android:backgroundTint="#F8F5F5"
+        android:elevation="10dp"
+        android:layout_marginBottom="50dp"
+
+        />
+
+</RelativeLayout>
