@@ -1684,8 +1684,12 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btnDoing
+id btnDone
+id btnLayout
 id btnLogin
 id btnLogout
+id btnTodo
 id buttonPanel
 id cancel_button
 id center
@@ -1731,15 +1735,12 @@ id direct
 id disableHome
 id disablePostScroll
 id disableScroll
-id doing
-id done
 id dragDown
 id dragEnd
 id dragLeft
 id dragRight
 id dragStart
 id dragUp
-id dropOptions
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -1860,9 +1861,11 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id recLayout
 id rectangles
 id relLogin
-id relTabs
+id relParent
+id relRecycler
 id reverseSawtooth
 id right
 id right_icon
@@ -1924,7 +1927,6 @@ id stretch
 id submenuarrow
 id submit_area
 id tabMode
-id tabStatus
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -1933,6 +1935,7 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id taskRecycler
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -1955,7 +1958,6 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
-id todo
 id toggle
 id top
 id topPanel
@@ -1969,6 +1971,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id txtAdd
+id txtNewTask
 id txtUsername
 id txtselect
 id unchecked
@@ -2154,6 +2157,8 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string doing
+string done
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2205,6 +2210,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string todo
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

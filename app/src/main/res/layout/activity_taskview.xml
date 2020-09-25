@@ -42,59 +42,78 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
+    <!-- Linear layout for tabs-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/btnLayout"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUsername"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <Button
+            android:id="@+id/btnTodo"
+            android:layout_width="100dp"
+            android:backgroundTint="@color/colorRed"
+            android:textColor="#F1EEEE"
+            android:text="@string/todo"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="todoListener"/>
+
+        <Button
+            android:id="@+id/btnDoing"
+            android:layout_width="100dp"
+            android:backgroundTint="@color/colorRed"
+            android:textColor="#F1EEEE"
+            android:text="@string/doing"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:onClick="doingListener"/>
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="100dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/colorRed"
+            android:textColor="#F1EEEE"
+            android:text="@string/done"
+            android:layout_height="wrap_content"
+            android:onClick="doneListener"/>
+
+    </LinearLayout>
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtUsername"
-        android:layout_marginTop="10dp"
-        android:id="@+id/relTabs">
+        android:id="@+id/relRecycler"
+        android:layout_below="@+id/btnLayout">
 
-        <com.google.android.material.tabs.TabLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/taskRecycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tabStatus"
-            app:tabIndicatorColor="@color/colorRed"
-            app:tabIconTint="@color/colorRed"
-            app:tabTextColor="#0D0D0E">
-
-            <!-- To Do tab -->
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/todo"
-                android:text="To Do"
-                android:icon="@drawable/ic_todo"
-                >
-
-            </com.google.android.material.tabs.TabItem>
+            android:layout_marginLeft="30dp">
 
 
-            <!-- Doing tab -->
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/doing"
-                android:text="Doing"
-                android:icon="@drawable/ic_doing">
 
-            </com.google.android.material.tabs.TabItem>
+        </androidx.recyclerview.widget.RecyclerView>
 
-
-            <!-- Done tab -->
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/done"
-                android:text="Done"
-                android:icon="@drawable/ic_done">
-
-            </com.google.android.material.tabs.TabItem>
-
-
-        </com.google.android.material.tabs.TabLayout>
 
 
     </RelativeLayout>
+
+
+
+
+
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
