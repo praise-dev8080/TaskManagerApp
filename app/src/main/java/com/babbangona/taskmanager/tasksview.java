@@ -63,13 +63,13 @@ public class tasksview extends AppCompatActivity implements TasksRecViewAdapter.
         //use data received
 
 
-        //initialize class;
-        new Tasks("todo", "eat rice");
-        new Tasks("todo", "wash clothes");
-        new Tasks("doing", "eating beans");
-        new Tasks("doing", "coding");
-        new Tasks("done", "fixing bugs");
-        new Tasks("done", "creating Facebook");
+//        //initialize class
+//        new Tasks("todo", "eat rice");
+//        new Tasks("todo", "wash clothes");
+//        new Tasks("doing", "eating beans");
+//        new Tasks("doing", "coding");
+//        new Tasks("done", "fixing bugs");
+//        new Tasks("done", "creating Facebook");
 
 
     }
