@@ -50,6 +50,8 @@ public class AddTask extends AppCompatActivity {
             Toast.makeText(this, spinner.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             new Tasks(spinner.getSelectedItem().toString(), newTask.getText().toString());
             Toast.makeText(this, "Task added successfully", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(), tasksview.class);
+            startActivity(intent);
         }
         catch (Exception e){
             Toast.makeText(this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();

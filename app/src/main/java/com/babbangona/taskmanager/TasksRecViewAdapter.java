@@ -13,17 +13,19 @@ import java.util.ArrayList;
 public class TasksRecViewAdapter extends RecyclerView.Adapter<TasksRecViewAdapter.ViewHolder> {
 
     private ArrayList<String> tasks = new ArrayList<>();
+    private OnTaskListener mOnTaskListener;
 
 
-    public  TasksRecViewAdapter(){
-
+    public  TasksRecViewAdapter(OnTaskListener onTaskListener){
+        this.tasks = tasks;
+        this.mOnTaskListener = onTaskListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.drop_down, parent,false);
-        ViewHolder holder = new ViewHolder(view);
+        ViewHolder holder = new ViewHolder(view, mOnTaskListener);
         return holder;
     }
 
@@ -44,11 +46,24 @@ public class TasksRecViewAdapter extends RecyclerView.Adapter<TasksRecViewAdapte
         notifyDataSetChanged();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView txtTask;
-        public ViewHolder(@NonNull View itemView) {
+        OnTaskListener onTaskListener;
+        public ViewHolder(@NonNull View itemView, OnTaskListener onTaskListener) {
             super(itemView);
             txtTask = itemView.findViewById(R.id.recLayout);
+            this.onTaskListener = onTaskListener;
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            onTaskListener.onTaskClick(getAdapterPosition());
         }
     }
+
+    public interface OnTaskListener{
+        void onTaskClick(int position);
+    }
+
 }
