@@ -14,7 +14,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:fontFamily="@font/sourcesansproblack"
-        android:textColor="#070707"
+        android:textColor="@color/black"
         android:layout_marginTop="80dp"
         android:layout_centerHorizontal="true"/>
 
@@ -87,7 +87,7 @@
                 android:padding="8dp"
                 android:layout_height="100dp"
                 android:hint="Type task here...."
-                android:backgroundTint="#F3F0F0"
+                android:backgroundTint="@color/white"
                 android:fontFamily="@font/sourcesansproblacklt"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -102,7 +102,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorRed"
         android:text="Submit"
-        android:backgroundTint="#F8F5F5"
+        android:backgroundTint="@color/white"
         android:elevation="10dp"
         android:layout_marginBottom="50dp"
         android:onClick="btnCreate"

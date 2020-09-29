@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/change_status"
-        android:textColor="#FAF7F7"
+        android:textColor="@color/white"
         android:fontFamily="@font/sourcesansproblack"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -22,7 +22,7 @@
         android:onClick="changeTodo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FAFAFA"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/sourcesansproregular"
         android:text="@string/todo"
         android:textColor="@color/colorRed"/>
@@ -31,7 +31,7 @@
         android:onClick="changeDoing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FAFAFA"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/sourcesansproregular"
         android:text="@string/doing"
         android:textColor="@color/colorRed"/>
@@ -40,7 +40,7 @@
         android:onClick="changeDone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FAFAFA"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/sourcesansproregular"
         android:text="@string/done"
         android:textColor="@color/colorRed"
@@ -52,7 +52,7 @@
         android:layout_height="30dp"
         android:background="@drawable/ic_closepopup"
         android:layout_gravity="center"
-        android:backgroundTint="#FAFAFA"
+        android:backgroundTint="@color/white"
         android:onClick="closeDialog"/>
 
 

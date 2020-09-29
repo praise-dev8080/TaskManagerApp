@@ -13,7 +13,7 @@
         android:fontFamily="@font/my_custom_font"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="#4C79AF"
+        android:textColor="@color/tomatoRed"
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"/>
 
