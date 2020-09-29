@@ -47,34 +47,20 @@ public class tasksview extends AppCompatActivity implements TasksRecViewAdapter.
 
         //receive intent
         Intent intent = getIntent();
-        if(intent.getStringExtra("username") != null){
-         displayName = intent.getStringExtra("username");
-            upperString = displayName.substring(0, 1).toUpperCase() + displayName.substring(1).toLowerCase();
-            username.setText(upperString + "'s" + " Tasks");
-        }
-        else{
+        if(intent.getStringExtra("username") != null || intent.getStringExtra("username") == null)
+            {
             SharedPreferences sharedpreference = getSharedPreferences(MainActivity.MYPREFERENCES, Context.MODE_PRIVATE);
             displayName = sharedpreference.getString(MainActivity.loginUsername, "");
             upperString = displayName.substring(0, 1).toUpperCase() + displayName.substring(1).toLowerCase();
             username.setText(upperString + "'s" + " Tasks");
         }
 
-
-        //use data received
-
-
-//        //initialize class
-//        new Tasks("todo", "eat rice");
-//        new Tasks("todo", "wash clothes");
-//        new Tasks("doing", "eating beans");
-//        new Tasks("doing", "coding");
-//        new Tasks("done", "fixing bugs");
-//        new Tasks("done", "creating Facebook");
-
-
     }
 
 
+    /*
+    Method for logging out of the app and resetting the shared preferences to be empty
+    * */
     public void logout(View view){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.putExtra("true", "true");
@@ -105,6 +91,7 @@ public class tasksview extends AppCompatActivity implements TasksRecViewAdapter.
     //To do Listener
     public void todoListener(View view){
         Button b = (Button)view;
+        buttonColorChange(b);
         RecAdapter(b.getText().toString());
 
     };
@@ -112,12 +99,14 @@ public class tasksview extends AppCompatActivity implements TasksRecViewAdapter.
     //Doing Listener
     public void doingListener(View view){
         Button b = (Button)view;
+        buttonColorChange(b);
         RecAdapter(b.getText().toString());
     }
 
     //Done Listener
     public void doneListener(View view) {
         Button b = (Button) view;
+        buttonColorChange(b);
         RecAdapter(b.getText().toString());
     }
 
@@ -130,7 +119,10 @@ public class tasksview extends AppCompatActivity implements TasksRecViewAdapter.
         }
 
 
-
+    /*
+    * Overriding the onTaskClick method in the implemented interface from the recycler
+    * view adapter.
+    * */
     @Override
     public void onTaskClick(int position) {
         String pos = tasks.get(position);
@@ -154,6 +146,31 @@ public class tasksview extends AppCompatActivity implements TasksRecViewAdapter.
     //close dialogue
     public void closeDialog(View v){
         statusDialog.dismiss();
+    }
+
+    /*
+    * Change button color if active
+    * */
+    public void buttonColorChange(Button v){
+        //get all buttons in the view and add
+        Button todo = findViewById(R.id.btnTodo);
+        Button doing = findViewById(R.id.btnDoing);
+        Button done = findViewById(R.id.btnDone);
+        ArrayList<Button> buttons = new ArrayList<>();
+        buttons.add(todo);
+        buttons.add(doing);
+        buttons.add(done);
+
+        //loop over the array to change style of clicked and unclicked buttons
+        for (Button b: buttons ){
+            if (v != b){
+                b.setBackgroundColor(getResources().getColor(R.color.white));
+                b.setTextColor(getResources().getColor(R.color.colorRed));
+            }
+            v.setBackgroundColor(getResources().getColor(R.color.colorRed));
+            v.setTextColor(getResources().getColor(R.color.white));
+        }
+        return;
     }
 
 

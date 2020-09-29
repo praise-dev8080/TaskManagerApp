@@ -300,12 +300,12 @@
         "source": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_login.png.flat",
-        "source": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\src\\main\\res\\drawable-hdpi\\ic_login.png"
-    },
-    {
         "merged": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_closepopup.png.flat",
         "source": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_closepopup.png"
+    },
+    {
+        "merged": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_login.png.flat",
+        "source": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\src\\main\\res\\drawable-hdpi\\ic_login.png"
     },
     {
         "merged": "C:\\Users\\Praise Okonta\\AndroidStudioProjects\\TaskManager\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
